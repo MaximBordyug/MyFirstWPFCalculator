@@ -1,0 +1,63 @@
+﻿<Window x:Class="WpfApp_DZ2Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp_DZ2Calculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="345" Width="392">
+    
+    <Grid Margin="0,0,0,-30">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="260*"/>
+            <ColumnDefinition Width="61*"/>
+            <ColumnDefinition Width="71*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1.2*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="textBlockInfo" Grid.Row="0" Padding="5" Background="#FFE6FF00"   Text="" FontFamily="Adobe Gothic Std B" FontSize="17" TextAlignment="Right"  Grid.ColumnSpan="3" Margin="0,0,-1,60" Grid.RowSpan="2"  />
+        <TextBox x:Name="BaseInfo" Grid.Row="1" Padding="5"  Text="0" IsReadOnly="True" FontFamily="Adobe Gothic Std B" FontSize="30" TextAlignment="Right" Grid.ColumnSpan="3" Margin="0,0,0,60" Grid.RowSpan="2" />
+        <Grid x:Name="GridButtons" Grid.Row="2" Margin="0,0,0,31" Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition>
+
+                </RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+            <Button Content="CE"  Width="auto" Height="auto" Margin="1" Foreground="Navy" FontSize="24" Grid.Row="0" Grid.Column="0" Click="clickCE"/>
+            <Button Content="C"  Width="auto" Height="auto"  Margin="1" Foreground="Navy" FontSize="24" Grid.Row="0" Grid.Column="1" Click="clickC"/>
+            <Button Content="&lt;"  Width="auto" Height="auto" Margin="1" Foreground="Navy" FontSize="24" Grid.Row="0" Grid.Column="2" Click="clickBackSpace"/>
+            <Button Content="/"  Width="auto" Height="auto" Margin="1" Foreground="Navy" FontSize="24" Grid.Row="0" Grid.Column="3" Click="clickOperation"/>
+            <Button Content="7"  Width="auto" Height="auto" Margin="1" Foreground="Navy" FontSize="24" Grid.Row="1" Grid.Column="0" Click="clickNumb"/>
+            <Button Content="8"  Width="auto" Height="auto" Margin="1" Foreground="Navy" FontSize="24" Grid.Row="1" Grid.Column="1" Click="clickNumb"/>
+            <Button Content="9"  Width="auto" Margin="1" Foreground="Navy" FontSize="24" Grid.Row="1" Grid.Column="2" Click="clickNumb"/>
+            <Button Content="*"  Width="auto" Margin="1" Foreground="Navy" FontSize="24" Grid.Row="1" Grid.Column="3" Click="clickOperation"/>
+            <Button Content="4"  Width="auto" Margin="1" Foreground="Navy" FontSize="24" Grid.Row="2" Grid.Column="0" Click="clickNumb"/>
+            <Button Content="5"  Width="auto" Margin="1" Foreground="Navy" FontSize="24" Grid.Row="2" Grid.Column="1" Click="clickNumb"/>
+            <Button Content="6"  Width="auto" Margin="1" Foreground="Navy" FontSize="24" Grid.Row="2" Grid.Column="2" Click="clickNumb"/>
+            <Button Content="-"  Width="auto" Margin="1" Foreground="Navy" FontSize="24" Grid.Row="2" Grid.Column="3" Click="clickOperation"/>
+            <Button Content="1"  Width="auto" Margin="1" Foreground="Navy" FontSize="24" Grid.Row="3" Grid.Column="0" Click="clickNumb"/>
+            <Button Content="2"  Width="auto" Margin="1" Foreground="Navy" FontSize="24" Grid.Row="3" Grid.Column="1" Click="clickNumb"/>
+            <Button Content="3"  Width="auto" Margin="1" Foreground="Navy" FontSize="24" Grid.Row="3" Grid.Column="2" Click="clickNumb"/>
+            <Button Content="+"  Width="auto" Margin="1" Foreground="Navy" FontSize="24" Grid.Row="3" Grid.Column="3" Click="clickOperation"/>
+            <Button Content="."  Width="auto" Margin="1" Foreground="Navy" FontSize="24" Grid.Row="4" Grid.Column="0" Click="clickPointer"/>
+            <Button Content="0"  Width="auto" Margin="1" Foreground="Navy" FontSize="24" Grid.Row="4" Grid.Column="1" Click="clickNumb"/>
+            <Button Content="="  Width="auto" Margin="1" Foreground="Navy" FontSize="24" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Click="clickRez"/>
+        </Grid>
+    </Grid>
+</Window>
